@@ -1,9 +1,9 @@
 <header >
   <nav class="blue darken-4" role="navigation">
     <div class="nav-wrapper container">
-      <%= link_to "Starter Template", root_url, id: "logo", class: "brand-logo", id: "logo-container"  %>
+      <%= link_to "MediAssist", root_url, id: "logo", class: "brand-logo", id: "logo-container"  %>
       <ul class="right hide-on-med-and-down">
-         <li><%= link_to "Home",   root_url %></li>
+         <li><%= link_to "Patients",   root_url %></li>
 
          <% if user_signed_in? %>
          <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete%></li>
@@ -14,7 +14,7 @@
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-         <li><%= link_to "Home",   root_url %></li>
+         <li><%= link_to "Patients",   root_url %></li>
 
          <% if user_signed_in? %>
          <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete%></li>
