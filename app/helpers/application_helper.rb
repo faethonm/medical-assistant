@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def full_title(page_title = '')
     base_title = 'MedAssist'
     if page_title.empty?
@@ -14,8 +13,7 @@ module ApplicationHelper
       person.avatar_url
     else
       gravatar_id = Digest::MD5.hexdigest(person.email.downcase)
-      gravatar_url = "http://gravatar.com/avatar/#{gravatar_id}.png?d=mm"
+      "http://gravatar.com/avatar/#{gravatar_id}.png?d=mm"
     end
   end
-
 end

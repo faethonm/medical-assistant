@@ -1,7 +1,7 @@
 class PatientsController < ApplicationController
   before_action :authenticate_user!
   respond_to :json, :html
-  
+
   before_action :find_patient, only: [:show, :destroy, :edit, :update]
 
   def index
