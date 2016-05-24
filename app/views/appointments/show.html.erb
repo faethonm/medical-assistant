@@ -1,7 +1,23 @@
-<div class="card white">
-  <p><%= @appointment.start_date %></p>
-  <p><%= @appointment.end_date %></p>
-  <p><%= @appointment.description %></p>
-  <p><%= @appointment.patient.name %></p>
+<div class="row">
+  <div class="col s12 l6 offset-l3">
+    <div class="card">
+      <div class="card-content">
+          <div class="row">
+            <div class="col l4">
+              <p><%= image_tag avatar_url(@appointment.patient), size: 100, class: 'circle' %></p>
+            </div>
+            <div class="col l8">
+            <span class="card-title"><%=@appointment.start_date.strftime("%H:%M%p")%> to <%= @appointment.end_date.strftime("%H:%M%p") %></span>
+              <p><%=@appointment.patient.name %></p>
+              <p><%=@appointment.description %></p>
+            </div>
+          </div>
+      </div>
+      <div class="card-action">
+        <%= link_to 'Edit', edit_appointment_path%>
+        <%= link_to 'Delete', @appointment%>
+      </div>
+    </div>
+  </div>
 </div>
 

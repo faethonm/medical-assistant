@@ -1,10 +1,10 @@
-Hi <%= current_user.email %>
+<h3 class="header">Hi Dr.<%= current_user.last_name || current_user.email %></h3>
 <section>
-Here are your appointments today
+<h5>Here are your appointments today:</h5>
 <ul>
   <% @appointments.each do |appointment| %>
     <%= render partial: 'shared/appointment', locals: {appointment: appointment} %>
   <% end %>
 </ul>
 
-</section>
+</section>_
