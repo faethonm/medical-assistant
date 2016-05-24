@@ -1,2 +1,5 @@
-<ul> <%= render @appointments %></ul>
-<%= render 'new_appointment_btn' %>
+<ul>
+  <% @appointments.each do |appointment| %>
+    <%= render partial: 'shared/appointment', locals: {appointment: appointment} %>
+  <% end %>
+</ul>
