@@ -1,5 +1,5 @@
 User.destroy_all
-doctor = User.create(email: 'faethonm@cytanet.com', password: 'password')
+doctor = User.create(email: 'test@example.com', password: 'password')
 
 (1..10).each do
   doctor.patients.create!(
