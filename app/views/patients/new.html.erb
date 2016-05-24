@@ -1,0 +1,48 @@
+<% provide(:title, 'Patient') %>
+<div class="container">
+  <h2 class="row center blue-text">Patient</h2>
+  <div class="card">
+    <div class="row">
+      <div class="col s6 offset-s3">
+        <%= form_for @patient  do |f| %>
+
+          <div class="row">
+            <div class="input-field">
+              <%= f.label :first_name ,class: "validate" %><br />
+              <%= f.text_field :first_name, autofocus: true, required:true %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field">
+              <%= f.label :last_name ,class: "validate" %><br />
+              <%= f.text_field :last_name, autofocus: true, required:true %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field">
+              <%= f.label :email ,class: "validate" %><br />
+              <%= f.email_field :email, autofocus: true, required:true %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field">
+              <%= f.label :phone ,class: "validate" %><br />
+              <%= f.text_field :phone, autofocus: true, required:true %>
+            </div>
+          </div>
+
+          <div class="card-action center">
+            <button class="btn waves-effect waves-light">
+              <%= f.submit "Add" do %>
+              <i class="material-icons right">plus</i>
+              <% end %>
+            </button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

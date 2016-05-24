@@ -9,7 +9,7 @@
 
 <% if user_signed_in? %>
   <li>
-    <%= link_to '#', class: 'dropdown-button', data: {activates:"dropdown1"} do%>
+    <%= link_to root_url, class: 'dropdown-button', data: {activates:"dropdown1"} do%>
       <i class="material-icons right">arrow_drop_down</i><%= current_user.email%>
     <% end %>
   </li>

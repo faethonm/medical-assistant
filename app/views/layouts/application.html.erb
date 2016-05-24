@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sample</title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= stylesheet_link_tag 'application', media: 'all',
                                            'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport">
     <%= csrf_meta_tags %>
     <%= render 'layouts/shim' %>
   </head>
-  <body>
+  <body class="grey lighten-5">
     <%= render 'layouts/header' %>
     <main>
       <div class="container">
