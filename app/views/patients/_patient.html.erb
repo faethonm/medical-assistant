@@ -4,14 +4,32 @@
     <div class="col s12 l6 offset-l3">
       <div class="card">
         <div class="card-content">
-          <span class="card-title"><%=patient.name %></span>
-            <p><%=patient.phone %></p>
-            <p><%=patient.email %></p>
+          
+            <div class="row">
+            <div class="col l6">
+                <p><%= image_tag avatar_url(patient), size: 100, class:'circle'%></p>
+              </div>
+            <div class="col l6">
+            <span class="card-title"><%=patient.name %></span>
+                <p><%=patient.phone %></p>
+                <p><%=patient.email %></p>
+              </div>
+              
+
+            
+
         </div>
         <div class="card-action">
           <%= link_to 'Details', patient%>
+          <%= link_to 'Edit', edit_patient_path(patient)%>
         </div>
       </div>
     </div>
 </div>
   </li>
+
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+  <%= link_to @patient, class:"btn-floating btn-large red" do %>
+    <i class="large material-icons">add</i>
+    <% end %>
+</div>
